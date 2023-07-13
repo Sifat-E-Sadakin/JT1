@@ -16,6 +16,9 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import Page2AddUser from './components/Page2AddUser.jsx';
+import Page2EditUser from './components/Page2EditUser.jsx';
+import Page3 from './components/Page3.jsx';
 
 const queryClient = new QueryClient()
 
@@ -28,6 +31,18 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Page1></Page1>,
+      },
+      {
+        path: '/addUser',
+        element: <Page2AddUser></Page2AddUser>,
+      },
+      {
+        path: '/editUser/:id',
+        element: <Page2EditUser></Page2EditUser>,
+      },
+      {
+        path: '/viewUsers',
+        element: <Page3></Page3>,
       },
     ],
   },
